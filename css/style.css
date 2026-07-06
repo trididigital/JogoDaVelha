@@ -1,3 +1,129 @@
+/* Estilos gerais da pagina */
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Titulo principal do jogo */
 h1{
+    font-size: 42px;
+}
+
+/* Botoes de escolha do modo de jogo */
+#buttons-container button{
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+}
+
+/* Container principal do tabuleiro */
+#container{
+    display: flex;
+    width: 300px;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cada casa do jogo da velha */
+.box{
+    height: 100px;
+    border: 5px solid #000;
+    box-sizing: border-box;
+    flex: 1 1 33%;
+}
+
+/* Remove a borda externa de cima do tabuleiro */
+#block-1, #block-2, #block-3{
+    border-top: none;
+}
+
+/* Remove a borda externa esquerda do tabuleiro */
+#block-1, #block-4, #block-7{
+    border-left: none;
+}
+
+/* Remove a borda externa direita do tabuleiro */
+#block-3, #block-6, #block-9{
+    border-right: none;
+}
+
+/* Remove a borda externa de baixo do tabuleiro */
+#block-7, #block-8, #block-9{
+    border-bottom: none;
+}
+
+/* Estilo da peca X */
+.X{
+    font-size: 65px;
     color: red;
+    display: inline-block;
+    line-height: 100px;
+}
+
+/* Estilo da peca O */
+.O{
+    width: 50px;
+    height: 50px;
+    border: 5px solid green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 17px;
+}
+
+/*
+Classe usada para esconder elementos.
+No momento esta desativada porque esta dentro deste comentario.
+.hide{
+    display: none !important;
+}
+    */
+
+/* Espacamento de cada bloco do placar */
+.scrore-box{
+    margin: 0 20px;
+}
+
+/* Area do placar */
+#scoreboard-container{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 25px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* X mostrado no placar */
+#x-scoreboard{
+    color: red;
+    margin-left: 3px;
+}
+
+/* O mostrado no placar */
+#o-scoreboard{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid green;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+/* Mensagem exibida no fim da partida */
+#message{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:150px;
+    width: 500px;
+    font-size: 50px;
+    background-color: #000;
+    padding: 20px;
+    display: none;
 }
